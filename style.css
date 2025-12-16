@@ -1,0 +1,178 @@
+/* CSS Normalize and Box Model */
+@import url('https://necolas.github.io/normalize.css/normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Spirax:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One:wght@400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* Body Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poiret One', cursive;
+  color: white;
+}
+
+/* Fixed Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(61, 31, 25, 0.8);
+  padding:  0;
+  cursor: pointer;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Spirax', 'Times New Roman', serif;
+  font-size: 2rem;
+  margin: 0 30px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  text-transform:capitalize;
+}
+
+nav a:hover,
+nav a.active {
+ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Section Styles */
+section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  position:relative;
+}
+
+#hot {
+  background-image: url('https://syne25l-tuc.lms.nodehill.se/wp-content/uploads/2018/09/hot.jpg');
+}
+
+#juicy {
+  background-image: url('https://syne25l-tuc.lms.nodehill.se/wp-content/uploads/2018/09/juicy.jpg');
+}
+
+#cosy {
+  background-image: url('https://syne25l-tuc.lms.nodehill.se/wp-content/uploads/2018/09/cosy.jpg');
+}
+
+/* Article Content */
+article {
+
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Typography */
+h1 {
+  font-family:'Spirax', 'Times New Roman', serif;
+  font-size: 4rem;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color:#8B0000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Text blocks with red background */
+article p {
+  font-family: 'Poiret One', cursive;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  background: rgba(139, 0, 0, 0.85);
+  padding: 3px 60px;
+  border-radius: 0;
+  display: block;
+  width: 70%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* First paragraph - move to left */
+article p:nth-child(2) {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Second paragraph - move to right */
+article p:nth-child(3) {
+  margin-left: auto;
+  margin-right: 0;
+}
+/* Last paragraph (menu/info) styling */
+/* Last paragraph (menu/info) styling */
+article p:last-child {
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  font-size: 1rem;
+  padding: 30px 40px;
+  width: 70%; /* Match the width of other paragraphs */
+  margin: 0 auto; /* Center the last paragraph */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+
+    padding: 10px 0;
+  }
+  
+  nav a {
+    margin: 20px 0;
+    font-size: 1.5rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  article {
+   
+    margin: 0 20px;
+  }
+  
+  article p:last-child {
+    padding: 20px 25px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  article p {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+  }
+
+  nav a {
+    font-size: 1.2rem;
+    margin: 0 15px;
+  }
+}
+/* Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ...existing code... */
